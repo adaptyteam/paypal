@@ -18,7 +18,7 @@ It is possible that some endpoints are missing in this client, but you can use b
 ## Usage
 
 ```go
-import "github.com/plutov/paypal/v4"
+import "github.com/adaptyteam/paypal/v4"
 
 // Create a client instance
 c, err := paypal.NewClient("clientID", "secretID", paypal.APIBaseSandBox)

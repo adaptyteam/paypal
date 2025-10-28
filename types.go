@@ -1071,7 +1071,18 @@ type (
 
 	// PaymentSourcePaypal structure
 	PaymentSourcePaypal struct {
-		ExperienceContext PaymentSourcePaypalExperienceContext `json:"experience_context"`
+		VaultID           *string                               `json:"vault_id,omitempty"`
+		Attributes        *PaymentSourcePaypalAttributes        `json:"attributes,omitempty"`
+		ExperienceContext *PaymentSourcePaypalExperienceContext `json:"experience_context,omitempty"`
+	}
+
+	PaymentSourcePaypalAttributes struct {
+		Vault *PaymentSourcePaypalAttributesVault `json:"vault,omitempty"`
+	}
+
+	PaymentSourcePaypalAttributesVault struct {
+		StoreInVault string  `json:"store_in_vault"`
+		UsageType    *string `json:"usage_type,omitempty"`
 	}
 
 	PaymentSourcePaypalExperienceContext struct {
